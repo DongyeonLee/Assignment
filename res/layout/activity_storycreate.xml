@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dramaandcompany.dongyeon.assignment.MainActivity">
+
+    <ImageView
+        android:background="@drawable/line"
+        android:id="@+id/storyCreateLineImage1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/storyCreatePictureNumberText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/storyCreateLineImage1"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:text="0장의 사진" />
+
+    <ImageView
+        android:background="@drawable/line"
+        android:id="@+id/storyCreateLineImage2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/storyCreatePictureNumberText" />
+
+    <!--<HorizontalScrollView
+        android:id="@+id/storyCreateImagesList"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_below="@id/storyCreateLineImage2">
+
+    </HorizontalScrollView>-->
+
+    <RelativeLayout
+        android:id="@+id/storyCreateImagesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/storyCreateLineImage2">
+
+        <Button
+            android:id="@+id/storyCreateCameraOpenButton"
+            android:layout_width="80dp"
+            android:layout_height="65dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:onClick="StoryCreateCameraOpenButtonClicked" />
+
+        <ImageView
+            android:id="@+id/storyCreateImage1"
+            android:layout_width="80dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/storyCreateImage2"
+            android:layout_width="80dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="100dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/storyCreateImageSpareNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/storyCreateLineImage3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/storyCreateImagesLayout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/storyCreateLineImage3"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/storyCreateTitleEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="제목을 입력해주세요"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/storyCreateMemoEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/storyCreateTitleEditText"
+            android:layout_marginTop="16dp"
+            android:hint="메모를 입력해주세요" />
+    </RelativeLayout>
+</RelativeLayout>

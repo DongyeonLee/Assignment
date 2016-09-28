@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dramaandcompany.dongyeon.assignment.MainActivity">
+
+    <ImageView
+        android:id="@+id/storyDetailLineImage1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line" />
+
+    <TextView
+        android:id="@+id/storyDetailPictureNumberText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/storyDetailLineImage1"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp" />
+
+    <ImageView
+        android:id="@+id/storyDetailLineImage2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/storyDetailPictureNumberText"
+        android:background="@drawable/line" />
+
+    <HorizontalScrollView
+        android:id="@+id/storyDetailImagesList"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_below="@id/storyDetailLineImage2">
+
+    </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/storyDetailLineImage3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/storyDetailImagesList"
+        android:background="@drawable/line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/storyDetailLineImage3"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:singleLine="true"
+            android:id="@+id/storyDetailTitleEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/storyDetailMemoEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/storyDetailTitleEditText"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/storyDetailAdjustedTimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/storyDetailMemoEditText"
+            android:layout_marginTop="16dp" />
+    </RelativeLayout>
+</RelativeLayout>
